@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-# LAB - Class 07
-=======
-# Auth API
->>>>>>> Stashed changes
+# LAB - Class 08
 
 ## Project: Auth API
 
@@ -52,9 +48,5 @@ clone repo, fill out env file `npm i`, then run `node app.js` in the terminal
 
 to run tests, after `npm i`, run `npm test`
 
-<<<<<<< Updated upstream
-[LAB 7 PR #1](https://github.com/ShadowDraco/bearer-auth/pull/1)
-=======
 **\*\*\*\*** Update before finishing ---------
 [LAB 8 PR #2](https://github.com/ShadowDraco/auth-api/pull/2)
->>>>>>> Stashed changes
