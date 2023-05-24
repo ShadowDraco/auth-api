@@ -18,5 +18,9 @@ module.exports = {
   db: sequelize,
   food: new Collection(food),
   clothes: new Collection(clothes),
-  users, //! is it better to use a collection or not
+  userModule: new Collection(users),
+  users,
+  // ? The routes are built to use collections for food and clothes
+  // ? Auth route is made to use raw models
+  //* Use both */
 };

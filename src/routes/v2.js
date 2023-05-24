@@ -2,16 +2,27 @@
 
 const express = require("express");
 const dataModules = require("../models");
+const { userModule } = require("../models");
 
-const acl = require("../auth/middleware/acl");
+const permissions = require("../auth/middleware/acl");
 const bearer = require("../auth/middleware/bearer");
 
 const router = express.Router();
 
+router.get("/", bearer, (req, res) => {
+  res.status(200).send("You are bearer authenticated for v2!");
+});
+
 router.param("model", (req, res, next) => {
   const modelName = req.params.model;
+
   if (dataModules[modelName]) {
-    req.model = dataModules[modelName];
+    //* If the model being searched for is the conflicted one set it to the right model */
+    if (modelName === "users") {
+      req.model = userModule;
+    } else {
+      req.model = dataModules[modelName];
+    }
     next();
   } else {
     next("Invalid Model");
@@ -20,9 +31,9 @@ router.param("model", (req, res, next) => {
 
 router.get("/:model", bearer, handleGetAll);
 router.get("/:model/:id", bearer, handleGetOne);
-router.post("/:model", bearer, acl("create"), handleCreate);
-router.put("/:model/:id", bearer, acl("update"), handleUpdate);
-router.delete("/:model/:id", bearer, acl("delete"), handleDelete);
+router.post("/:model", bearer, permissions("create"), handleCreate);
+router.put("/:model/:id", bearer, permissions("update"), handleUpdate);
+router.delete("/:model/:id", bearer, permissions("delete"), handleDelete);
 
 async function handleGetAll(req, res) {
   let allRecords = await req.model.get();

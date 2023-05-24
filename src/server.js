@@ -18,6 +18,10 @@ app.use(express.json());
 
 app.use(logger);
 
+app.get("/", (req, res) => {
+  res.status(200).send("Home route!");
+});
+
 // Routes
 app.use(authRoutes);
 app.use("/api/v1", v1Routes);
