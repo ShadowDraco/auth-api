@@ -16,11 +16,10 @@ const users = userModel(sequelize, DataTypes);
 
 module.exports = {
   db: sequelize,
+  // ? The  V routes are built to use collections for food and clothes
   food: new Collection(food),
   clothes: new Collection(clothes),
   userModule: new Collection(users),
-  users,
-  // ? The routes are built to use collections for food and clothes
   // ? Auth route is made to use raw models
-  //* Use both */
+  users, //* Use both */
 };
