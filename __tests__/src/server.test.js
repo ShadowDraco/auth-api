@@ -3,7 +3,6 @@
 process.env.SECRET = "TEST_SECRET";
 
 const supertest = require("supertest");
-const base64 = require("base-64");
 
 const { server } = require("../../src/server.js");
 const { db } = require("../../src/models/index");
@@ -11,7 +10,6 @@ const { db } = require("../../src/models/index");
 const permissions = require("../../src/auth/middleware/acl");
 const basic = require("../../src/auth/middleware/basic");
 const bearer = require("../../src/auth/middleware/bearer");
-const { expect } = require("@jest/globals");
 
 beforeAll(async () => {
   await db.sync();
