@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
-require('dotenv').config();
-const { db } = require('./api-server/src/models');
-const server = require('./api-server/src/server.js');
-const PORT = process.env.PORT || 3001
+require("dotenv").config();
+const { db } = require("./src/models");
+const server = require("./src/server.js");
+const PORT = process.env.PORT || 3001;
 
 db.sync().then(() => {
   server.start(PORT);
