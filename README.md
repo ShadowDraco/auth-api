@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-# auth-api
-implement a fully functional, authenticated and authorized API Server using the latest coding techniques.
-=======
-# LAB - Class 07
+# LAB - Class 08
 
-## Project: Bearer auth
+## Project: Auth API
 
 ### Author: Ethan Storm
 
@@ -18,12 +14,16 @@ Deploy an Express server that implements [Basic Authentication](https://en.wikip
 
 any user that has successfully logged in using basic authentication (username and password) is able to continuously authenticate … using a “token”
 
-![LAB 7 UML](assets/Lab7.png)
+### Phase 3
+
+implement a fully functional, authenticated and authorized API Server using the latest coding techniques.
+
+![LAB 8 UML](assets/Lab8.png)
 
 ### Links and Resources
 
-[Github Actions](https://github.com/ShadowDraco/bearer-auth/actions)
-[Backend deployment](https://frolic-bearer-auth.onrender.com)
+[Github Actions](https://github.com/ShadowDraco/auth-api/actions)
+[Backend deployment](https://frolic-auth-api.onrender.com)
 
 ### Collaboration
 
@@ -48,5 +48,4 @@ clone repo, fill out env file `npm i`, then run `node app.js` in the terminal
 
 to run tests, after `npm i`, run `npm test`
 
-[LAB 7 PR #1](https://github.com/ShadowDraco/bearer-auth/pull/1)
->>>>>>> 5d95681 (brought in starter code and configs)
+[LAB 8 PR #1](https://github.com/ShadowDraco/auth-api/pull/1)
