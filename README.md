@@ -48,5 +48,4 @@ clone repo, fill out env file `npm i`, then run `node app.js` in the terminal
 
 to run tests, after `npm i`, run `npm test`
 
-**\*\*\*\*** Update before finishing ---------
-[LAB 8 PR #2](https://github.com/ShadowDraco/auth-api/pull/2)
+[LAB 8 PR #1](https://github.com/ShadowDraco/auth-api/pull/1)
