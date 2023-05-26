@@ -7,10 +7,6 @@ const supertest = require("supertest");
 const { server } = require("../../src/server.js");
 const { db } = require("../../src/models/index");
 
-const permissions = require("../../src/auth/middleware/acl");
-const basic = require("../../src/auth/middleware/basic");
-const bearer = require("../../src/auth/middleware/bearer");
-
 beforeAll(async () => {
   await db.sync();
 });
